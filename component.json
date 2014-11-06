@@ -1,0 +1,24 @@
+{
+  "name": "tiny-license",
+  "version": "1.0.0",
+  "repository": "shinnn/tiny-license.js",
+  "description": "Create a tiny JavaScript license comment from package data",
+  "keywords": [
+    "license",
+    "banner",
+    "comment",
+    "block",
+    "package",
+    "json"
+  ],
+  "main": "tiny-license-cjs.js",
+  "scripts": [
+    "tiny-license-cjs.js"
+  ],
+  "dependencies": {
+    "shinnn/package-license-types": "*",
+    "shinnn/package-author-names": "*",
+    "shinnn/block-comment.js": "*"
+  },
+  "license": "MIT"
+}

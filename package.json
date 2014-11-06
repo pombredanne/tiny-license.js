@@ -1,0 +1,63 @@
+{
+  "name": "tiny-license",
+  "version": "0.0.0",
+  "description": "Create a tiny JavaScript license comment from package data",
+  "main": "./tiny-license-cjs.js",
+  "files": [
+    "tiny-license-cjs.js",
+    "LICENSE"
+  ],
+  "scripts": {
+    "pretest": "eslint *.js & jscs *.js",
+    "test": "bower install && node test.js",
+    "coverage": "istanbul cover -x=bower_components/** test.js",
+    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
+  },
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "url": "https://github.com/shinnn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinnn/tiny-license.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shinnn/tiny-license.js/issues"
+  },
+  "homepage": "https://github.com/shinnn/tiny-license.js.js",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shinnn/tiny-license.js/blob/master/LICENSE"
+    }
+  ],
+  "keywords": [
+    "license",
+    "banner",
+    "comment",
+    "block",
+    "package",
+    "json",
+    "cli",
+    "command-line",
+    "browser",
+    "client-side"
+  ],
+  "dependencies": {
+    "block-comment": "^1.0.0",
+    "package-author-names": "^1.0.0",
+    "package-license-types": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^0.9.2",
+    "istanbul": "^0.3.2",
+    "istanbul-coveralls": "^1.0.1",
+    "jscs": "^1.7.3",
+    "require-bower-files": "^1.0.0",
+    "tape": "^3.0.2"
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98
+  }
+}
