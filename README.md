@@ -31,7 +31,7 @@ tinyLicense(json);
 npm install tiny-license
 ```
 
-#### [Bower](http://bower.io/) [![Bower version](https://badge.fury.io/bo/tiny-license.svg)](https://github.com/shinnn/tiny-license/releases)
+#### [Bower](http://bower.io/) [![Bower version](https://badge.fury.io/bo/tiny-license.svg)](https://github.com/shinnn/tiny-license.js/releases)
 
 ```sh
 bower install tiny-license
