@@ -1,6 +1,5 @@
 {
   "name": "tiny-license",
-  "version": "1.0.0",
   "description": "Create a tiny JavaScript license comment from package data",
   "keywords": [
     "license",

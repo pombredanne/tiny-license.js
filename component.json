@@ -1,6 +1,6 @@
 {
   "name": "tiny-license",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": "shinnn/tiny-license.js",
   "description": "Create a tiny JavaScript license comment from package data",
   "keywords": [
