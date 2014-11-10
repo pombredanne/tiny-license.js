@@ -21,6 +21,7 @@ tinyLicense(json);
  * isogram | (c) Shinnosuke Watanabe
  * https://github.com/shinnn/isogram
 */
+
 ```
 
 ## Installation
@@ -45,9 +46,10 @@ var tinyLicense = require('shinnn/tiny-license.js');
 
 ## API
 
-### tinyLicense(packageData)
+### tinyLicense(*packageData* [, *option*])
 
 *packageData*: `Object`  
+*option*: `Object`  
 Return: `String`
 
 It takes data of a package definition file, like [package.json](https://www.npmjs.org/doc/files/package.json.html) and [bower.json](https://github.com/bower/bower.json-spec), and returns a string of JavaScript block comment which represents the license of the package.
@@ -81,6 +83,21 @@ tinyLicense(json);
  * foo | CC0-1.0 (c) John Smith, Mary Sue
  * http://nodejs.org/
 */
+
+```
+
+#### option.lastNewline
+
+Type: `Boolean`  
+Default: `true`
+
+Setting this option `false` removes the last newline from the result.
+
+```javascript
+var json = {name: 'foo'};
+
+tinyLicense(json);                       //=> '/*!\n * foo\n*/\n'
+tinyLicense(json, {lastNewline: false}); //=> '/*!\n * foo\n*/'
 ```
 
 ## License

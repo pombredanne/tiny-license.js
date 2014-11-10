@@ -5,7 +5,7 @@ var test = require('tape');
 
 function runTest(description, main) {
   test(description, function(t) {
-    t.plan(9);
+    t.plan(10);
 
     t.equal(
       main({
@@ -18,7 +18,7 @@ function runTest(description, main) {
         '/*!',
         ' * foo | MIT (c) Bob',
         ' * qux.com',
-        '*/'
+        '*/\n'
       ].join('\n'),
       'should create a comment from an object.'
     );
@@ -31,7 +31,7 @@ function runTest(description, main) {
       [
         '/*!',
         ' * foo | (c) Bob, Sue',
-        '*/'
+        '*/\n'
       ].join('\n'),
       'should regard `homepage` property as optional.'
     );
@@ -44,7 +44,7 @@ function runTest(description, main) {
       [
         '/*!',
         ' * MIT, BSD-3-Clause (c) Bob',
-        '*/'
+        '*/\n'
       ].join('\n'),
       'should regard `name` property as optional.'
     );
@@ -58,7 +58,7 @@ function runTest(description, main) {
         '/*!',
         ' * (c) Bob',
         ' * foo.com',
-        '*/'
+        '*/\n'
       ].join('\n'),
       'should regard `license` property as optional.'
     );
@@ -67,9 +67,18 @@ function runTest(description, main) {
       main({}),
       [
         '/*!',
-        '*/'
+        '*/\n'
       ].join('\n'),
       'should create a comment from an object without any properties.'
+    );
+
+    t.equal(
+      main({}, {lastNewline: false}),
+      [
+        '/*!',
+        '*/'
+      ].join('\n'),
+      'should remove the last newline using `lastNewline` option.'
     );
 
     t.throws(function() {

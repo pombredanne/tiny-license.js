@@ -2,8 +2,13 @@
  * tiny-license | MIT (c) Shinnosuke Watanabe
  * https://github.com/shinnn/tiny-license.js
 */
-window.tinyLicense = function tinyLicense(data) {
+window.tinyLicense = function tinyLicense(data, option) {
   'use strict';
+
+  option = option || {};
+  if (option.lastNewline === undefined) {
+    option.lastNewline = true;
+  }
 
   if (arguments.length === 0) {
     throw new TypeError('No arguments. (One argument required)');
@@ -26,5 +31,5 @@ window.tinyLicense = function tinyLicense(data) {
     data.homepage
   ].filter(Boolean);
 
-  return window.blockComment(lines, {start: '!'});
+  return window.blockComment(lines, {start: '!'}) + (option.lastNewline ? '\n' : '');
 };

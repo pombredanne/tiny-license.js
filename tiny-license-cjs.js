@@ -6,8 +6,13 @@ var blockComment = require('block-comment');
 var packageAuthorNames = require('package-author-names');
 var packageLicenseTypes = require('package-license-types');
 
-module.exports = function tinyLicense(data) {
+module.exports = function tinyLicense(data, option) {
   'use strict';
+
+  option = option || {};
+  if (option.lastNewline === undefined) {
+    option.lastNewline = true;
+  }
 
   if (arguments.length === 0) {
     throw new TypeError('No arguments. (One argument required)');
@@ -30,5 +35,5 @@ module.exports = function tinyLicense(data) {
     data.homepage
   ].filter(Boolean);
 
-  return blockComment(lines, {start: '!'});
+  return blockComment(lines, {start: '!'}) + (option.lastNewline ? '\n' : '');
 };
