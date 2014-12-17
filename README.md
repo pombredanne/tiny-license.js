@@ -1,10 +1,10 @@
 # tiny-license.js
 
-[![Build Status](https://travis-ci.org/shinnn/tiny-license.js.svg?branch=master)](https://travis-ci.org/shinnn/tiny-license.js)
+[![Build Status](https://img.shields.io/travis/shinnn/tiny-license.js.svg?style=flat)](https://travis-ci.org/shinnn/tiny-license.js)
 [![Build status](https://ci.appveyor.com/api/projects/status/e0n5bwe7cw089dp2?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/tiny-license-js)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/tiny-license.js.svg)](https://coveralls.io/r/shinnn/tiny-license.js)
-[![Dependency Status](https://david-dm.org/shinnn/tiny-license.js.svg)](https://david-dm.org/shinnn/tiny-license.js)
-[![devDependency Status](https://david-dm.org/shinnn/tiny-license.js/dev-status.svg)](https://david-dm.org/shinnn/tiny-license.js#info=devDependencies)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/tiny-license.js.svg?style=flat)](https://coveralls.io/r/shinnn/tiny-license.js)
+[![Dependency Status](https://david-dm.org/shinnn/tiny-license.js.svg?style=flat)](https://david-dm.org/shinnn/tiny-license.js)
+[![devDependency Status](https://david-dm.org/shinnn/tiny-license.js/dev-status.svg?style=flat)](https://david-dm.org/shinnn/tiny-license.js#info=devDependencies)
 
 Create a tiny JavaScript license comment from package data
 
@@ -21,18 +21,20 @@ tinyLicense(json);
  * isogram | (c) Shinnosuke Watanabe
  * https://github.com/shinnn/isogram
 */
-
 ```
 
 ## Installation
 
-#### [npm](https://www.npmjs.org/) [![NPM version](https://badge.fury.io/js/tiny-license.svg)](https://www.npmjs.org/package/tiny-license)
+[![NPM version](https://img.shields.io/npm/v/tiny-license.svg?style=flat)](https://www.npmjs.com/package/tiny-license)
+[![Bower version](https://img.shields.io/bower/v/tiny-license.svg?style=flat)](https://github.com/shinnn/tiny-license.js/releases)
+
+#### [npm](https://www.npmjs.com/)
 
 ```sh
 npm install tiny-license
 ```
 
-#### [Bower](http://bower.io/) [![Bower version](https://badge.fury.io/bo/tiny-license.svg)](https://github.com/shinnn/tiny-license.js/releases)
+#### [Bower](http://bower.io/)
 
 ```sh
 bower install tiny-license
