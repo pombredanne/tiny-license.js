@@ -9,7 +9,7 @@
     "package",
     "json"
   ],
-  "main": "./tiny-license.js",
+  "main": "tiny-license.js",
   "homepage": "https://github.com/shinnn/tiny-license.js",
   "repository": {
     "type": "git",
@@ -30,12 +30,10 @@
   "ignore": [
     "**/.*",
     "*.yml",
+    "*.js",
+    "*.json",
     "bower_components",
     "components",
-    "node_modules",
-    "tiny-license-cjs.js",
-    "test.js",
-    "package.json",
-    "component.json"
+    "node_modules"
   ]
 }

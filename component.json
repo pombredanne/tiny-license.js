@@ -15,6 +15,9 @@
   "scripts": [
     "tiny-license-cjs.js"
   ],
+  "files": [
+    "LICENSE"
+  ],
   "dependencies": {
     "shinnn/package-license-types": "*",
     "shinnn/package-author-names": "*",
