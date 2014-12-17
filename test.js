@@ -81,21 +81,29 @@ function runTest(description, main) {
       'should remove the last newline using `lastNewline` option.'
     );
 
-    t.throws(function() {
-      main({author: true});
-    }, /TypeError/, 'should throw a type error when the `author` property has an invalid value.');
+    t.throws(
+      main.bind(null, {author: true}),
+      /TypeError.*must be a string.*object/,
+      'should throw a type error when the `author` property has an invalid value.'
+    );
 
-    t.throws(function() {
-      main({authors: true});
-    }, /TypeError/, 'should throw a type error when the `authors` property has invalid values.');
+    t.throws(
+      main.bind(null, {authors: true}),
+      /TypeError.*must be an array.*string/,
+      'should throw a type error when the `authors` property has invalid values.'
+    );
 
-    t.throws(function() {
-      main(true);
-    }, /TypeError/, 'should throw a type error when it takes a non-object argument.');
+    t.throws(
+      main.bind(null, true),
+      /TypeError.*must be an object/,
+      'should throw a type error when it takes a non-object argument.'
+    );
 
-    t.throws(function() {
-      main();
-    }, /TypeError/, 'should throw a type error when it takes no arguments.');
+    t.throws(
+      main.bind(null),
+      /TypeError.*No arguments/,
+      'should throw a type error when it takes no arguments.'
+    );
   });
 }
 
